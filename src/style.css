@@ -1,0 +1,163 @@
+:root{
+  --color-green: #27AE60;
+  --color-green-light: #6FCF97;
+  --color-green-dark: #219653;
+
+  --color-grey: #BDBDBD;
+  --color-grey-light: #E0E0E0;
+  --color-grey-dark: #828282;
+
+  --color-primary: #2D9CDB;
+  --color-primary-light: #56CCF2;
+
+  --color-orange: #F2994A;
+}
+
+
+
+* > * {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-size: 1em;
+}
+
+body, html, #wrapper{
+  width: 100%;
+  height: 100%;
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgba(0,0,0,.85);
+  padding: 40px 20px 10px 20px;
+  font-family: 'Roboto Slab', serif;
+}
+.header-menu{
+  display: flex;
+  flex-flow: row;
+  font-size: 1.2rem;
+}
+.menu-about{
+  padding: 2px 4px;
+  color: var(--color-grey-dark);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  font-family: 'JetBrains Mono', monospace;
+}
+.menu-works{
+  margin-left: 10px;
+  padding: 2px 4px;
+  color: var(--color-grey-dark);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  font-family: 'JetBrains Mono', monospace;
+}
+.menu-contacts{
+  margin-left: 10px;
+  padding: 2px 4px;
+  color: var(--color-grey-dark);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  font-family: 'JetBrains Mono', monospace;
+}
+.-active-{
+  border-radius: 4px;
+  color: white;
+  transition-duration: .4s;
+}
+.header-lang{
+  font-size: 12px;
+  color: var(--color-primary);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.about, .contacts{
+  display: none;
+  padding: 20px 10px ;
+  min-width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+.body-active{
+  display: block;
+}
+.body-active.about{
+  display: flex;
+  flex-flow:column;
+}
+.about-title{
+  font-size: 18px;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+}
+.about-text{
+  font-size: 16px;
+  color: var(--color-grey-dark);
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+  padding: 10px 0px;
+}
+.about-timelines{
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.about-timelines::before{
+  position: absolute;
+  left: calc(50% - 1px);
+  right: auto;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  top: 0;
+  width: 3px;
+  background: var(--color-primary-light);
+}
+time-lines {
+  width: 100%;
+  max-width: 600px;
+  margin: 10px 0px;
+}
+.body-active.contacts{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.contacts-link{
+  text-decoration: none;
+  color: var(--color-primary);
+  margin: 20px 0px;
+  font-size: 18px;
+}
+.contacts-tel{}
+.contacts-tel-name{
+  cursor: default;
+  font-size: 14px;
+  color: var(--color-grey-dark)
+}
+.contacts-email{}
+.contacts-email-name{
+  cursor: default;
+  font-size: 14px;
+  color: var(--color-grey-dark)
+}
+
+.contacts-info{
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--color-green)
+}
